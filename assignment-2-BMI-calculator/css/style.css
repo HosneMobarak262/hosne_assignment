@@ -1,0 +1,50 @@
+@font-face {
+    font-family: playfairBold;
+    src: url(../font/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+  }
+
+@font-face {
+    font-family: playfairRegular;
+    src: url(../font/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+  }
+
+body{
+    background-image: url(../img/10136775_17973908.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: playfairRegular;
+}
+#this-content{
+    background-color: #d3e1ce;
+    border-radius: 1rem;
+    margin-top: 10rem;
+    color: rgb(56, 54, 54);
+}
+
+.rows{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.rows .col-md-6{
+    display: flex;
+    justify-content: center;
+}
+.rows .col-md-12{
+    display: flex;
+    justify-content: center;
+}
+.rows button{
+    width: 35%;
+    background-color: rgb(247, 206, 154);
+    border-radius: 10px;
+}
+
+input{
+    border-radius: 5px;
+    background-color: rgb(233, 227, 227);
+    text-align: center;
+}
+label{
+    margin-bottom: 0.75rem;
+    font-family: playfairBold;
+}
