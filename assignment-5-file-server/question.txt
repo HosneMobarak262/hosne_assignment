@@ -1,0 +1,45 @@
+Assignment: Building a Simple File Server
+
+In this assignment, you will build a simple file server using Node.js, the built-in fs module, and the built-in http module. Your file server should listen on port 3000 and serve files from a public directory.
+
+
+
+Requirements
+
+Your file server should meet the following requirements:
+
+
+
+1.It should use the http module to create an HTTP server.
+
+2.It should listen on port 3000.
+
+3.It should serve files from a public directory.
+
+4.It should log a message to the console when it starts listening on port 3000.
+
+5.It should return a "404 Not Found" response for any request for a file that does not exist in the public directory.
+
+Instructions
+
+Follow these instructions to complete the assignment:
+
+
+
+Create a new file named server.js.
+
+Create a public directory in the same directory as server.js, and add some static files (HTML, CSS, JavaScript) to the directory.
+
+Write the code for your file server in server.js.
+
+Test your file server by running the node server.js command in your terminal.
+
+Open your web browser and navigate to http://localhost:3000 to view your files.
+
+Test your file server by requesting files that do not exist in the public directory.
+
+
+
+Submit Instruction:
+
+Please submit your github repository link
