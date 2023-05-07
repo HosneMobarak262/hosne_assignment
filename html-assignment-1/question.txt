@@ -1,0 +1,27 @@
+Create a webpage using HTML that includes the following elements:
+
+
+
+A heading that says "My Favorite Foods"
+
+An unordered list of at least three of your favorite foods, with a brief description of each.
+
+An image of one of your favorite foods.
+
+A link to a website with a recipe for one of your favorite foods.
+
+Your webpage should be well-structured, and all elements should be properly formatted and aligned.
+
+
+
+What should be Submitted :
+
+
+
+    Github Repository Link
+
+
+
+    You should add a note.txt file in your github repository where you should include your deployed version link (optional)
+
+
