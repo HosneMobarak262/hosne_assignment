@@ -1,0 +1,35 @@
+Express MongoDB Back End Development 01
+
+Part 1: Short Answer Questions
+
+Answer each of the following questions in a few sentences.
+
+
+
+1.What is client-side and server-side in web development, and what is the main difference between the two?
+
+2.What is an HTTP request and what are the different types of HTTP requests?
+
+3.What is JSON and what is it commonly used for in web development?
+
+4.What is a middleware in web development, and give an example of how it can be used.
+
+5.What is a controller in web development, and what is its role in the MVC architecture?
+
+
+
+
+
+Part 2: Essay
+
+Write an essay on the importance of web development in today's digital world, and the impact it has on society and businesses. Discuss how web development has evolved over time, and what the future holds for web developers.
+
+
+
+What you should Submit :
+
+
+    You should submit your github repository link
+
+    In this repository you should include two separate pdf file. One for part1 and one for part2.
+
