@@ -9,7 +9,7 @@ const port = 6000;
 
 // initial route
 app.get('/', function (req,res){
-   res.sendFile(__dirname + "/index.html");
+   res.sendFile(__dirname + "/node.html");
 });
 
 let books = [];
