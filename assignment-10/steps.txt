@@ -1,0 +1,5 @@
+npm init --y
+
+npm i express body-parser cookie-parser multer jsonwebtoken mongoose dotenv  cors express-mongo-sanitize express-rate-limit helmet hpp xss-clean
+
+npm i nodemon -D

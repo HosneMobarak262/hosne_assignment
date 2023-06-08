@@ -2,6 +2,7 @@ const books = require("../models/books.js");
 
 // create Book
 exports.createbook = async (req, res) => {
+    console.log("test");
     try{
         // destructure input fields
         const {Title, Author, Description, PublishedYear} = req.body;
