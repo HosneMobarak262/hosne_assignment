@@ -41,3 +41,8 @@ exports.getAllProducts = async (req, res) => {
         console.log(err);
     }
 }
+
+// send user info
+exports.sendUserInfo = async (req, res) => {
+    res.status(200).json({status: "success", message: req.user});
+}
