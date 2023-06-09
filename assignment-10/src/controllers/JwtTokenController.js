@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const fs = require('fs'); // for private key file
 
 exports.generateToken = (req, res) => {
    try{
@@ -16,11 +17,23 @@ exports.generateToken = (req, res) => {
        const expiresIn = '6h';
 
    //    generate token
-       const generateToken = (payload, secretKey, expiresIn) => {
-           return jwt.sign(payload, secretKey, {expiresIn});
+   //     const generateToken = (payload, secretKey, expiresIn) => {
+   //         return jwt.sign(payload, secretKey, {expiresIn});
+   //     };
+
+       // const token = generateToken(payload, secretKey, expiresIn);
+
+       // Rsa
+       const privateKey = fs.readFileSync('src/rsaKeys/hm-private-key.pem');
+
+       const jwtOptions = {
+           algorithm: 'RS256',
+           expiresIn: '1h',
+           issuer: 'HosneMobarak', // Replace with your issuer name
+           audience: 'everyone' // Replace with your audience name
        };
 
-       const token = generateToken(payload, secretKey, expiresIn);
+       const token = jwt.sign(payload, privateKey, jwtOptions);
 
        res.status(200).json({token: token});
 
