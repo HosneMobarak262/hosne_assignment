@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "2184d68f-e383-42a4-a9d8-6d1625bdeddd",
+		"name": "Assignment-10",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22672553"
+	},
+	"item": [
+		{
+			"name": "get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/product",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"hosne\",\r\n    \"password\": \"12345678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/gettoken",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"gettoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "virify token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJob3NuZSIsInBhc3N3b3JkIjoiMTIzNDU2NzgiLCJpYXQiOjE2ODYzNDMxOTgsImV4cCI6MTY4NjM0Njc5OCwiYXVkIjoiZXZlcnlvbmUiLCJpc3MiOiJIb3NuZU1vYmFyYWsifQ.slVT8MK79Z_yeZi_Emye9bI0GBHXtzao_pxgf4v8KMg58s579w-Y1N1OEw5RGkyFyGZqqcbrN-l3-c5yn5AG4sYHq-my52zEyqwjLEOJ1hJnn3lfgS29SD3O2PyGbNjsflNJpWh5heuc_FmVBYtCtWucaEApowcRuxtCWcfkMbR5_fixnSmiy8waX_gLBvsVysgZ_ZmhmnVZgWEDGSoZTcyfRFhJ1zmFzLfGMc5cXV93IBVHHsMBDHywfm0YDTz31n9qX3bpsJlevMATis4zGKL6TOVgyjx6fJK2N2cVSaHs3Zhui5uYaFb6JggJIYDAuUqXJ-m2owGQfu7xqH0Fmw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"hosne\",\r\n    \"password\": \"12345678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/virifytoken",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"virifytoken"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "127.0.0.1:8000/api/v1",
+			"type": "string"
+		}
+	]
+}
