@@ -25,7 +25,7 @@ exports.generateToken = (req, res) => {
        res.status(200).json({token: token});
 
    } catch (err) {
-       res.status(500).json({message: "Internal Server Error. Could not generate token.", error: err});
+       res.json({message: "Internal Server Error. Could not generate token.", error: err});
        console.log(err);
    }
 };

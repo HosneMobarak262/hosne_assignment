@@ -25,7 +25,7 @@ exports.createProduct = async (req, res) => {
         }).save();
 
     } catch (err) {
-        res.status(500).json({message: "Internal Server Error", error: err});
+        res.json({message: "Internal Server Error", error: err});
         console.log(err);
     }
 }
@@ -37,7 +37,7 @@ exports.getAllProducts = async (req, res) => {
 
         res.json(products);
     } catch (err) {
-        res.status(500).json({message: "Internal Server Error", error: err});
+        res.json({message: "Internal Server Error", error: err});
         console.log(err);
     }
 }
