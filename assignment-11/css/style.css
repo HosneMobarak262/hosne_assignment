@@ -36,15 +36,14 @@ h1{
 .para{
     background-color: var(--color2);
     border-radius: 20px;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 1rem 5rem 1em 5rem;
 }
 
 .list{
     background-color: var(--color3);
     border-radius: 20px;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 1rem 5rem 1em 5rem;
+    margin-top: 3vh;
 }
 ul li:first-child{
     color: red;
@@ -71,10 +70,15 @@ ul li:first-child{
 .book-table{
     background-color: azure;
     border-radius: 20px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 table{
     border: 2px solid blueviolet;
+    margin: auto;
+    width: 80%;
+    border-radius: 5px;
 }
 td{
     border: 1px solid blue;
