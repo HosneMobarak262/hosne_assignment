@@ -60,6 +60,12 @@ ul li:first-child{
     width: var(--img-width);
     height: var(--img-height);
     border-radius: 10px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.image-tag:hover{
+    width: 65rem;
+    height: 45rem;
 }
 
 .book-table{
