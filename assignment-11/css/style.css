@@ -1,0 +1,94 @@
+@font-face {
+    font-family: playfairBold;
+    src: url(../font/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: playfairRegular;
+    src: url(../font/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+:root {
+    --color1: #007bff;
+    --color2: #8fb4de;
+    --color3: #40d0b7;
+    --font-size1 : 3rem;
+    --img-width : 60rem;
+    --img-height : 40rem;
+}
+
+body {
+    background-image: url("../img/10136775_17973908.jpg");
+    font-family: playfairRegular;
+    color: #343333;
+}
+
+.container{
+    width: 70%;
+    margin-left: 15%;
+}
+h1{
+    color: var(--color1);
+    font-size: var(--font-size1);
+    text-align: center;
+}
+
+.para{
+    background-color: var(--color2);
+    border-radius: 20px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.list{
+    background-color: var(--color3);
+    border-radius: 20px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+ul li:first-child{
+    color: red;
+}
+
+.image{
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.image-tag{
+    width: var(--img-width);
+    height: var(--img-height);
+    border-radius: 10px;
+}
+
+.book-table{
+    background-color: azure;
+    border-radius: 20px;
+}
+
+table{
+    border: 2px solid blueviolet;
+}
+td{
+    border: 1px solid blue;
+
+}
+tr :hover{
+    background-color: greenyellow;
+}
+
+table td:first-child {
+    background-color: lightblue;
+}
+
+table td:last-child {
+    background-color: lightcyan;
+}
+
+table tr:nth-child(even) {
+    background-color: lavenderblush; /* Background color for even rows */
+}
+thead tr{
+    background-color: limegreen;
+}
