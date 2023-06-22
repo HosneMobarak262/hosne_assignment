@@ -24,7 +24,7 @@ exports.generateToken = (req, res) => {
        // const token = generateToken(payload, secretKey, expiresIn);
 
        // Rsa
-       const privateKey = fs.readFileSync('src/rsaKeys/hm-private-key.pem');
+       const privateKey = fs.readFileSync('assets/rsaKeys/hm-private-key.pem');
 
        const jwtOptions = {
            algorithm: 'RS256',

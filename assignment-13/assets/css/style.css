@@ -1,0 +1,41 @@
+@font-face {
+    font-family: playfairExtraBold;
+    src: url(../font/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: playfairBold;
+    src: url(../font/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: playfairRegular;
+    src: url(../font/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+body{
+    font-family: playfairRegular;
+    text-align: center;
+    background-color: #e5e5e5;
+    color: #2c2b2b;
+}
+
+/* dark modes start */
+.dark-mode {
+    --bg-color: #343a40; /* Dark mode background color */
+    --text-color: #fff;  /* Dark mode text color */
+}
+/* dark modes end */
+
+/* navbar start */
+
+nav{
+    color: #4d4b63;
+}
+.navbar {
+}
+.navbar-brand {
+    font-size: 1.7rem;
+}
+
+/* navbar end */
