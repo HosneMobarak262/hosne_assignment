@@ -21,10 +21,7 @@ body{
 }
 
 /* dark modes start */
-.dark-mode {
-    --bg-color: #343a40; /* Dark mode background color */
-    --text-color: #fff;  /* Dark mode text color */
-}
+
 /* dark modes end */
 
 /* navbar start */
