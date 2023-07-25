@@ -1,0 +1,6 @@
+1. The primary objective of cybersecurity is to safeguard computer systems, networks, and data from unauthorized access, attacks, damage, and other security risks. Cybersecurity professionals work to develop, implement, and maintain security measures to protect against a wide range of threats, including cyberattacks, data breaches, malware, and social engineering attempts.
+
+2. Ethical hacking, also known as penetration testing or white hat hacking, involves authorized hacking activities with the objective of identifying security vulnerabilities in systems, networks, or applications. Ethical hackers act as security professionals who simulate real-world cyberattacks to discover weaknesses before malicious hackers can exploit them. Their goal is to find and fix vulnerabilities, ultimately enhancing the overall security of the target systems.
+
+
+Cybersecurity is a defensive strategy while ethical hacking is an offensive strategy.
