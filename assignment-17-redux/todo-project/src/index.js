@@ -6,11 +6,15 @@ import App from './App';
 
 import "../src/assets/css/bootstrap.css"
 import "../src/assets/css/custol.css"
+import {Provider} from "react-redux";
+import store from "./redux/store/store";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <Provider store={store}>
+          <App />
+      </Provider>
   </React.StrictMode>
 );
 
