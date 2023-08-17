@@ -1,0 +1,25 @@
+Question : Assume that, you are developing a backend for an e-commerce platform using Express.js and MongoDB. Your task is to create a Mongoose model for the products that will be listed on the platform.
+
+
+
+Please write the necessary code to accomplish the following:
+
+
+
+Import the required Mongoose library.
+
+Define a Mongoose schema named ProductSchema with the following fields:
+
+name (String, required)
+
+price (Number, required)
+
+description (String)
+
+category (String)
+
+createdAt (Date, default value: current date and time)
+
+Create a Mongoose model named Product using the defined schema.
+
+Export the Product model for use in other parts of your application.
