@@ -11,6 +11,8 @@ const xss=require('xss-clean');
 const hpp=require('hpp');
 const cors=require('cors');
 
+// Dotenv
+const dotenv = require('dotenv');
 
 // Database
 const mongoose=require('mongoose');
@@ -25,11 +27,20 @@ app.use(hpp());
 // Body Parser
 app.use(bodyParser.json());
 
+// dotenv
+dotenv.config()
+
 // Rate Limiter
 const limiter=rateLimit({windowMs:15*60*100,max:3600});
+app.use(limiter);
 
 // Database Connection
 
+let OPTION = {user:process.env.USER, pass:process.env.PASSWORD, autoIndex:true};
+
+mongoose.connect(process.env.URI, OPTION)
+    .then(res => console.log("Database Connected Successfully."))
+    .catch(error => console.log(error))
 
 // Managing Front End Routing Start
 // app.use(express.static('client/build'))
@@ -40,4 +51,4 @@ const limiter=rateLimit({windowMs:15*60*100,max:3600});
 
 // Managing BackEnd API Routing
 app.use("/api/v1",router);
-module.exports=app();
+module.exports=app;

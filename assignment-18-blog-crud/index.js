@@ -1,4 +1,4 @@
 const app=require('./app');
-app.listen(5000, function (){
+app.listen(process.env.PORT, function (){
     console.log("Application Start.")
 });

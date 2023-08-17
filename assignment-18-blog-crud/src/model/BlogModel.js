@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const DataSchema=mongoose.Schema({
     Title:{type: String, required: true},
     Text:{type: String, required: true},
-    author:{type: String}
+    Author:{type: String}
 },
     { timestamps: true, versionKey: false }
 )
