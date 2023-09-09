@@ -153,3 +153,38 @@ exports.getAveragePrice = async (req, res) => {
         res.status(400).json({status:"Fail", data: error});
     }
 }
+
+// revenue-by-month
+exports.getRevenueByTime = async (req, res) => {
+    try {
+        let data = await SalesModel.aggregate([
+            {
+                $group: {
+                    _id: {
+                        year: { $year: "$Date" },
+                        month: { $month: "$Date" },
+                    },
+                    totalRevenue: { $sum: { $multiply: ["$Quantity", "$Price"] } },
+                },
+            },
+            {
+                $project: {
+                    _id: 0,
+                    year: "$_id.year",
+                    month: "$_id.month",
+                    totalRevenue: 1,
+                },
+            },
+            {
+                $sort: {
+                    year: 1,
+                    month: 1,
+                },
+            },
+        ]);
+
+        res.status(200).json({ status: "Success", data: data });
+    } catch (error) {
+        res.status(400).json({ status: "Fail", data: error });
+    }
+}
