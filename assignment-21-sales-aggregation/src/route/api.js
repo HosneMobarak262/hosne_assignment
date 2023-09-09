@@ -6,7 +6,6 @@ const {getAllBlogs} = require("../controller/BlogController");
 
 const SalesController = require("../controller/SalesController")
 const {getAllSales} = require("../controller/SalesController");
-// const {getTotalRevenue} = require("../controller/SalesController");
 
 // API Routing End Point
 
@@ -20,6 +19,7 @@ router.delete("/blog/:id", BlogController.deleteBlogByID);
 
 // Sales Assignment
 router.get("/sales/total-revenue", SalesController.getTotalRevenue);
+router.get("/sales/quantity-by-product", SalesController.getQuantityByProduct);
 
 
 // Sales

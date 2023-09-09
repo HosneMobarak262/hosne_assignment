@@ -67,15 +67,9 @@ exports.getTotalRevenue = async (req, res) => {
     try{
         let data = await SalesModel.aggregate([
             {
-                $project: {
-                    quantity: { $toDouble: '$Quantity' },
-                    price: { $toDouble: '$Price' },
-                },
-            },
-            {
                 $group: {
                     _id: null,
-                    totalRevenue: { $sum: { $multiply: ['$quantity', '$price'] } },
+                    totalRevenue: { $sum: { $multiply: ['$Quantity', '$Price'] } },
                 },
             },
         ]);
@@ -83,6 +77,25 @@ exports.getTotalRevenue = async (req, res) => {
         const totalRevenue = data[0].totalRevenue;
 
         res.status(200).json({status:"Success", totalRevenue: totalRevenue});
+    } catch (error){
+        res.status(400).json({status:"Fail", data: error});
+    }
+}
+
+// quantity-by-product
+exports.getQuantityByProduct = async (req, res) => {
+    try{
+        let data = await SalesModel.aggregate([
+            {
+                $group: {
+                    _id : "$Product",
+                    Quantity :{ $sum : "$Quantity" }
+                }
+
+            }
+        ]);
+
+        res.status(200).json({status:"Success", data: data});
     } catch (error){
         res.status(400).json({status:"Fail", data: error});
     }
