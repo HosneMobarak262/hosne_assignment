@@ -188,3 +188,35 @@ exports.getRevenueByTime = async (req, res) => {
         res.status(400).json({ status: "Fail", data: error });
     }
 }
+
+// highest-quantity-sold
+exports.getHighestQuantitySold = async (req, res) => {
+    try{
+        let data = await SalesModel.aggregate([
+            {
+                $group: {
+                    _id: { product: "$Product", date: "$Date" },
+                    totalQuantity: { $sum: "$Quantity" },
+                },
+            },
+            {
+                $sort: { totalQuantity: -1 },
+            },
+            {
+                $limit: 1,
+            },
+            {
+                $project: {
+                    _id: 0,
+                    product: "$_id.product",
+                    date: "$_id.date",
+                    totalQuantity: 1,
+                },
+            },
+        ]);
+
+        res.status(200).json({ status: "Success", data: data });
+    } catch (error) {
+        res.status(400).json({ status: "Fail", data: error });
+    }
+}

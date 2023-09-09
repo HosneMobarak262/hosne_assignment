@@ -23,7 +23,7 @@ router.get("/sales/quantity-by-product", SalesController.getQuantityByProduct);
 router.get("/sales/top-products", SalesController.getTopProducts);
 router.get("/sales/average-price", SalesController.getAveragePrice);
 router.get("/sales/revenue-by-month", SalesController.getRevenueByTime);
-
+router.get("/sales/highest-quantity-sold", SalesController.getHighestQuantitySold);
 
 // Sales
 router.get("/sales", SalesController.getAllSales);
