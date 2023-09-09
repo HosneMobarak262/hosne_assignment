@@ -100,3 +100,29 @@ exports.getQuantityByProduct = async (req, res) => {
         res.status(400).json({status:"Fail", data: error});
     }
 }
+
+// top-products
+exports.getTopProducts = async (req, res) => {
+    try{
+        let data = await SalesModel.aggregate([
+            {
+                $group: {
+                    _id: "$Product",
+                    Total: {$sum: {$multiply: ['$Quantity', '$Price']}},
+
+                }
+            },
+            {
+                $sort : {Total : -1 }
+            },
+            {
+                $limit : 5
+            }
+
+        ]);
+
+        res.status(200).json({status:"Success", data: data});
+    } catch (error){
+        res.status(400).json({status:"Fail", data: error});
+    }
+}
