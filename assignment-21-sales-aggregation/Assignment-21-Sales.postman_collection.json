@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "80fe70ce-d207-4c52-8933-2058cc332a82",
+		"name": "Assignment-21-Sales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22672553"
+	},
+	"item": [
+		{
+			"name": "All Sales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}sales",
+					"host": [
+						"{{baseurl}}sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales total-revenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}sales/total-revenue",
+					"host": [
+						"{{baseurl}}sales"
+					],
+					"path": [
+						"total-revenue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales quantity-by-product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}sales/quantity-by-product",
+					"host": [
+						"{{baseurl}}sales"
+					],
+					"path": [
+						"quantity-by-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales top-products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}sales/top-products",
+					"host": [
+						"{{baseurl}}sales"
+					],
+					"path": [
+						"top-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales average price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}sales/average-price",
+					"host": [
+						"{{baseurl}}sales"
+					],
+					"path": [
+						"average-price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales revenue-by-month",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}sales/revenue-by-month",
+					"host": [
+						"{{baseurl}}sales"
+					],
+					"path": [
+						"revenue-by-month"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales highest-quantity-sold",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}sales/highest-quantity-sold",
+					"host": [
+						"{{baseurl}}sales"
+					],
+					"path": [
+						"highest-quantity-sold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Sales",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Product\": \"Product 5\",\r\n    \"Quantity\": 9,\r\n    \"Price\": 2500,\r\n    \"Date\": \"2023-09-12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}sales",
+					"host": [
+						"{{baseurl}}sales"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "127.0.0.1:6000/api/v1/",
+			"type": "string"
+		}
+	]
+}
