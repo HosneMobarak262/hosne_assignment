@@ -126,3 +126,30 @@ exports.getTopProducts = async (req, res) => {
         res.status(400).json({status:"Fail", data: error});
     }
 }
+
+// average-price
+exports.getAveragePrice = async (req, res) => {
+    try{
+        let data = await SalesModel.aggregate([
+            {
+                $group: {
+                    _id: null,
+                    totalRevenue: { $sum: { $multiply: ['$Quantity', '$Price'] } },
+                    totalQuantity: { $sum: "$Quantity" },
+                },
+            },
+            {
+                $project: {
+                    _id: 0,
+                    AveragePrice: { $divide: ["$totalRevenue", "$totalQuantity"] },
+                },
+            },
+        ]);
+
+        const totalRevenue = data[0].totalRevenue;
+
+        res.status(200).json({status:"Success", totalRevenue: data});
+    } catch (error){
+        res.status(400).json({status:"Fail", data: error});
+    }
+}

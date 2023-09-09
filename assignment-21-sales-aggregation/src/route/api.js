@@ -21,6 +21,7 @@ router.delete("/blog/:id", BlogController.deleteBlogByID);
 router.get("/sales/total-revenue", SalesController.getTotalRevenue);
 router.get("/sales/quantity-by-product", SalesController.getQuantityByProduct);
 router.get("/sales/top-products", SalesController.getTopProducts);
+router.get("/sales/average-price", SalesController.getAveragePrice);
 
 
 // Sales
